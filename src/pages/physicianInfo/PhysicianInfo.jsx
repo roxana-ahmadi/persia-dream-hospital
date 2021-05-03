@@ -1,9 +1,8 @@
-import React from "react";
-import { Row, Layout, Col, Typography, Divider } from "antd";
+import React from 'react';
+import { Row, Layout, Col, Typography, Divider } from 'antd';
 
-const PhysicianInfo = (props) => {
+const PhysicianInfo = props => {
   const { selectedPhysician = {} } = props;
-  console.log(props.selectedPhysician, "ss");
   const { Header, Content } = Layout;
   const { Title, Text } = Typography;
 
@@ -13,7 +12,7 @@ const PhysicianInfo = (props) => {
         <Row align="middle">
           <Col span={24}>
             <Title level={4} className="header-title">
-              {" "}
+              {' '}
               Dream Hospital
             </Title>
           </Col>
@@ -30,37 +29,37 @@ const PhysicianInfo = (props) => {
           <Col xxl={12} xxl={12} lg={12} md={12} sm={24} xs={24}>
             <Title
               level={4}
-              style={{ textAlign: "right", paddingRight: "15px" }}
+              style={{ textAlign: 'right', paddingRight: '15px' }}
             >
               گروه
             </Title>
-            <div style={{ textAlign: "right", paddingRight: "25px" }}>
+            <div style={{ textAlign: 'right', paddingRight: '25px' }}>
               <Text type="secondary">
                 {selectedPhysician.BeneficiaryGroupName}
               </Text>
             </div>
-            <Divider style={{ maxWidth: "80%" }} />
+            <Divider style={{ maxWidth: '80%' }} />
 
             <Title
               level={4}
-              style={{ textAlign: "right", paddingRight: "15px" }}
+              style={{ textAlign: 'right', paddingRight: '15px' }}
             >
               تحصیلات
             </Title>
-            <div style={{ textAlign: "right", paddingRight: "25px" }}>
+            <div style={{ textAlign: 'right', paddingRight: '25px' }}>
               <Text type="secondary">
                 {selectedPhysician.HighestExpertLevel}
               </Text>
             </div>
-            <Divider style={{ maxWidth: "80%" }} />
+            <Divider style={{ maxWidth: '80%' }} />
 
             <Title
               level={4}
-              style={{ textAlign: "right", paddingRight: "15px" }}
+              style={{ textAlign: 'right', paddingRight: '15px' }}
             >
               جنسیت
             </Title>
-            <div style={{ textAlign: "right", paddingRight: "25px" }}>
+            <div style={{ textAlign: 'right', paddingRight: '25px' }}>
               <Text type="secondary">{selectedPhysician.GenderType}</Text>
             </div>
           </Col>

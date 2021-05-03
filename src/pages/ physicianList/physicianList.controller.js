@@ -1,9 +1,9 @@
 /* eslint-disable import/no-anonymous-default-export */
 /* eslint-disable no-undef */
-import { useState, useEffect } from "react";
-import { physicianService } from "../../services/physician.service";
+import { useState, useEffect } from 'react';
+import { physicianService } from '../../services/physician.service';
 
-export default (props) => {
+export default props => {
   const { setSelectedPhysician } = props;
   const { getPhysiciansDto, searchPhysicianByName } = physicianService;
 
@@ -25,7 +25,7 @@ export default (props) => {
         throw error;
       }
       for (const item of response.value) {
-        if (item.BeneficiaryGroupName == "پزشک عمومی") generalDoctor.push(item);
+        if (item.BeneficiaryGroupName == 'پزشک عمومی') generalDoctor.push(item);
         else specialistDoctor.push(item);
       }
       setGeneralPhysician(generalDoctor);
@@ -35,7 +35,7 @@ export default (props) => {
     getPhysicianList();
   }, []);
 
-  const onSearch = async (key) => {
+  const onSearch = async key => {
     setLoading(true);
     const generalDoctor = [];
     const specialistDoctor = [];
@@ -47,7 +47,7 @@ export default (props) => {
       throw error;
     }
     for (const item of response.value) {
-      if (item.BeneficiaryGroupName == "پزشک عمومی") generalDoctor.push(item);
+      if (item.BeneficiaryGroupName == 'پزشک عمومی') generalDoctor.push(item);
       else specialistDoctor.push(item);
     }
     setGeneralPhysician(generalDoctor);
@@ -55,8 +55,7 @@ export default (props) => {
     setLoading(false);
   };
 
-  const onSelectPhysician = (physician) => {
-    console.log(physician);
+  const onSelectPhysician = physician => {
     setSelectedPhysician(physician);
   };
   return {

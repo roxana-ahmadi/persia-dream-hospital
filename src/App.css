@@ -1,21 +1,9 @@
-html {
-  height: 100vh;
-  max-width: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-body {
-  height: calc(100vh - 60px);
-
-  max-width: 100%;
-}
 .header {
   display: flex;
   align-items: center;
 }
 .content {
   padding: 30px;
-  height: 100vh;
 }
 
 .header-title {
@@ -33,4 +21,10 @@ body {
   padding-right: 50px;
   padding-top: 40px;
   box-sizing: border-box;
+}
+
+@media only screen and (max-width: 750px) {
+  .header {
+    height: 90px !important;
+  }
 }
