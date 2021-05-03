@@ -1,16 +1,20 @@
-import { Layout } from 'antd';
-import './App.css';
-import PhysicianList from './pages/ physicianList/PhysicianList';
+import "./App.css";
+import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import PhysicianListContainer from "./containers/physicianList.container";
+import PhysicianInfoContainer from "./containers/physicianInfo.container";
 
 function App() {
-  const { Header, Footer, Sider, Content } = Layout;
   return (
-    <Layout>
-      <Header>Dream Hospital</Header>
-      <Content className="content">
-        <PhysicianList />
-      </Content>
-    </Layout>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <PhysicianListContainer />
+        </Route>
+        <Route exact path="/physician-info">
+          <PhysicianInfoContainer />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
