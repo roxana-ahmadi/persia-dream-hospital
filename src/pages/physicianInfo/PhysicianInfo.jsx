@@ -20,7 +20,15 @@ const PhysicianInfo = props => {
       </Header>
       <Content>
         <Row className="physician-info-container">
-          <Col xxl={12} xxl={12} lg={12} md={12} sm={24} xs={24}>
+          <Col
+            style={{ display: 'flex', justifyContent: 'center' }}
+            xxl={12}
+            xxl={12}
+            lg={12}
+            md={12}
+            sm={24}
+            xs={24}
+          >
             <img
               className="physician-info-image"
               src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
